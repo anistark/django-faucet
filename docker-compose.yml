@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  faucet:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - SEPULIA_RPC_URL=${SEPULIA_RPC_URL}
+      - PRIVATE_KEY=${PRIVATE_KEY}
+      - FAUCET_ADDRESS=${FAUCET_ADDRESS}
